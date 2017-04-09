@@ -30,16 +30,19 @@ class deck:
 class round:
     def __init__(self, dealer, hands, deck):
         self.dealer = dealer
-        self.handMe = hands[ME]
-        self.handOpp = hands[OPP]
+        #self.handMe = hands[ME]
+        #self.handOpp = hands[OPP]
+        self.hands = hands
         self.cutCard = deck.dealone("CUT")
     def cut(self):
         #return deck.dealone("CUT")
         return self.cutCard
 class game:
-    def __init__(self, deck):
+    def __init__(self):
         self.points = [0,0]
-        self.deck = deck
+        #self.deck = deck
+    def shuffle(self):
+        self.deck = deck()
     def gameOver(self):
         if self.points[ME] > 120:
             return ME
@@ -116,10 +119,10 @@ class hand:
 					pegCardId = i
 					highCard = self.cards[i].cardValue()
         if highCard == 0:
-            print("(no more high card)\n")
+            print("(no more high card)")
             return 0
         self.playedCards[pegCardId] = 1
-        print("playing Id (i): %d" % pegCardId)
+        #print("playing Id (%d): %d" % (pegCardId,self.cards[pegCardId].cardValue()))
                 #print(self.cards)
         printCard(self.cards[pegCardId])
         return self.cards[pegCardId].cardValue()
@@ -137,64 +140,84 @@ class hand:
                 return
             print("%d (%s)" % (self.cards[i].cardNum, state))
 def discard(round):
-    round.handMe.discard(0)
-    round.handMe.discard(1)
-    round.handOpp.discard(0)
-    round.handOpp.discard(1)
+    round.hands[ME].discard(0)
+    round.hands[ME].discard(1)
+    round.hands[OPP].discard(0)
+    round.hands[OPP].discard(1)
 def peg(round):
-    while (len(round.handMe.cards) > 0  \
-           and len(round.handOpp.cards) > 0):
+    player = switchPlayer(round.dealer) #NON dealer starts pegging
+    lastPlayer = player
+    #while (len(round.hands[ME].cards) > 0  \
+    #       and len(round.hands[OPP].cards) > 0):
+    while(round.hands[ME].cardsInHand() or round.hands[OPP].cardsInHand()):
         total = 0
-        player = round.dealer
         while (total <= 31):
-            pegCardMe = 0
-            pegCardOpp = 0
-            print("total at while: %d" % total)
-            if (player == ME):
-                pegCardMe = round.handMe.peg(total)
-                total += pegCardMe
-                print("total after Me: %d" % total)
-                print("player %d left: %d" %(player,round.handMe.cardsInHand()))
+            #pegCard = 0
+            print("starttotal (pl: %d): %d" % (player,total))
+            pegCard = round.hands[player].peg(total)
+            if (pegCard): #played something
+                total += pegCard
+                print("(%d) played %d - total peg play: %d" % (player, pegCard,total))
+                #print("player %d left: %d" %(player,round.hands[player].cardsInHand()))
+                lastPlayer = player
+                player = switchPlayer(player)
+            #if (pegCard == 0):
             else:
-                pegCardOpp = round.handOpp.peg(total)
-                total += pegCardOpp
-                print("total after Opp: %d" % total)
-                print("player %d left: %d" %(player,round.handOpp.cardsInHand()))
-            player = switchPlayer(player)
-            if (pegCardMe == 0 and pegCardOpp == 0):
+                
                 if total == 0: #nothing more to play
+                    print("NOTHIGN MORE TO PLAY")
                     return 0
+                elif player is not lastPlayer: #still give lP chance to play
+                    print("give %d another chance" % lastPlayer)
+                    player = switchPlayer(player)
+                    continue
                 else:
                     print("Got to a count of %d, play again!"%total)
-                    return 0
+                    print("---------------")
+                    round.hands[ME].printHand()
+                    round.hands[OPP].printHand()
+                    print("ENDING PLAYER: %d\n\n" % lastPlayer)
+                    player = switchPlayer(player)
+                    break
+                    #return 0
+            #else:
+                #player = switchPlayer(player)
     return 1
 def count(round):
-    print("COUNT IT UP! (nothing yet)")
+    print("===========\nCOUNT IT UP! (nothing yet)\n==========")
     return
 def switchPlayer(dealerPlayer):
     return not dealerPlayer
 def play():
-    GAME = game(deck())
-    hands = deal(GAME.deck)
+    #GAME = game(deck())
+    GAME = game()
+    #hands = deal(GAME.deck)
     dealerPlayer = ME
+    roundNo = 0
     #print("gameover: %d" % GAME.gameOver())
     while (GAME.gameOver() < 0):
-        print("start a round, dealer: %d\n" % dealerPlayer)
+        print("\nstart round %d, dealer: %d" % (roundNo,dealerPlayer))
+        GAME.shuffle()
+        hands = deal(GAME.deck)
+
         oneRound = round(dealerPlayer,hands, GAME.deck)
         #cutCard = oneRound.cut(GAME.deck)
         print("cut!: ")
         printCard(oneRound.cutCard)
         discard(oneRound)
         if(not peg(oneRound)):
-            print("\nCOULDN'T PEG MORE")
+            print("\n********NNOOO*********COULDN'T PEG MORE")
             print("ME hand:")
-            oneRound.handMe.printHand()
+            oneRound.hands[ME].printHand()
             print("OPP hand:")
-            oneRound.handOpp.printHand()
-            break
+            oneRound.hands[OPP].printHand()
+        #else:
+        #    print("should never get here, delete evntually")
         count(oneRound)
-        dealerPlayer = switchPlayer()
-        break
+        dealerPlayer = switchPlayer(dealerPlayer)
+        roundNo += 1
+        if roundNo > 2:
+            break
 
 # main
 print("Starting")
