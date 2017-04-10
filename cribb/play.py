@@ -1,41 +1,32 @@
-from utils import printCard,card
+from utils import *
 from random import randint
 
 ME = 0
 OPP = 1
 HANDSIZE = 6
-print("Starting play\n")
+print("==========================\nStarting play\n=============\n")
 
 class deck:
-    # cardsdealt = []
-
     def __init__(self):
         self.cardsdealt = []
 
     def dealone(self, player):
         masterNum = randint(0,51)
         if masterNum in self.cardsdealt:
-            # print("Already here\n")
             altCard = self.dealone(player)
             masterNum = altCard.masterNum
         self.cardsdealt.append(masterNum)
         (suit,cardNum) = convertNumberCard(masterNum)
         cardObj = card(player,masterNum, suit, cardNum)
-        #cardObj.number = master
-        #cardObj.suit = suit
         return cardObj
-
     def display(self):
         print("remaining cards: %d\n",52-len(self.cardsdealt))
 class round:
     def __init__(self, dealer, hands, deck):
         self.dealer = dealer
-        #self.handMe = hands[ME]
-        #self.handOpp = hands[OPP]
         self.hands = hands
-        self.cutCard = deck.dealone("CUT----->")
+        self.cutCard = deck.dealone("CUT----->") ##NAME OF PLAYER
     def cut(self):
-        #return deck.dealone("CUT")
         return self.cutCard
 class game:
     def __init__(self):
@@ -49,23 +40,6 @@ class game:
         if self.points[OPP] > 120:
             return OPP
         return -1
-
-def convertNumberCard(number):
-    #print("number: %d" % number)
-    suitNum = number/13
-    if suitNum == 0:
-        suit = "clubs"
-    elif suitNum == 1:
-        suit = "diamonds"
-    elif suitNum == 2:
-        suit = "hearts"
-    elif suitNum == 3:
-        suit = "spades"
-    else:
-        print("error assigning suit")
-        return (-1,-1)
-    cardNumber = (number % 13) +1
-    return (suit,cardNumber)
 
 def deal(masterDeck):
     handsize=6
@@ -92,6 +66,7 @@ class hand:
         self.cards.append(card)
     def discard(self, cardId):
         discardCard = self.cards[cardId]
+        
         #print("discarding: %d" % self.cards[cardId].cardNum)
         self.playedCards[cardId] = -1
     def played(self,index):
