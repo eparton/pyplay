@@ -4,7 +4,7 @@ class card:
         self.masterNum = masterNum
         self.suit = suit
         self.cardNum = cardNum
-        #self.playedStatus = 0 ######### 0 == IN HAND
+        self.playedStatus = 0 ######### 0 == IN HAND
                               ######### 1 == PLAYED
                               #########-1 == IN KITTEN
     def cardValue(self):
@@ -18,6 +18,12 @@ class card:
                 'suit' : self.suit,
                 'cardNumber':self.cardNum, 
                 'cardName' : self.cardName() }
+    def cardIdString(self):
+        return self.player + " --- " + self.cardName() + " of " + self.suit
+    def cardJson(self):
+        return "{ 'player' : '" + self.player + "', " + \
+                " 'suit' : '"   + self.suit   + "', " + \
+                " 'cardName': '"+ self.cardName() + "' }"
     def cardName(self):
         if self.cardNum == 1:
             cardName = "Ace"
