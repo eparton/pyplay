@@ -27,8 +27,62 @@ class round:
         self.dealer = dealer
         self.hands = hands
         self.cutCard = deck.dealone("CUT-------------->") ##NAME OF PLAYER
+        self.total = 0
+        self.currentPlayer = dealer ##dealer a placeholder -- no initial value?
+        self.lastPlayer    = dealer ##dealer a placeholder -- no initial value?
     def cut(self):
         return self.cutCard
+    def discard(self):
+        self.hands[ME].discard(0)
+        self.hands[ME].discard(1)
+        self.hands[OPP].discard(0)
+        self.hands[OPP].discard(1)
+    def cardPlayed(self, cardValue):
+        self.total += cardValue
+        #print("(%s) played %d - total peg play: %d" % (pName(player), pegCard,self.total))
+        #print("player %d left: %d" %(player,self.hands[player].cardsInHand()))
+        self.lastPlayer = self.currentPlayer
+        self.currentPlayer = switchPlayer(self.currentPlayer)
+        print("  %d  <peg card %d played>" % (self.total, cardValue))
+        return cardValue
+    def endCount(self):
+        self.currentPlayer = switchPlayer(self.lastPlayer)
+        print("ENDING PLAYER: %s" % pName(self.lastPlayer))
+        print("Final total: %d (play again?)\n" % self.total)
+        
+    def pegRound(self):
+        self.currentPlayer = switchPlayer(self.dealer) #NON dealer starts pegging
+        self.lastPlayer = self.currentPlayer
+        while(self.hands[ME].cardsInHand() or self.hands[OPP].cardsInHand()):
+            self.total = 0
+            print("\nSTART PEG (start player: %s)" % pName(self.currentPlayer))
+            while (self.total <= 31):
+                # FIRST CHECK IF 31, IN WHICH CASE POINTS GIVEN AND PLAYER CHANGED
+                if self.total == 31:
+                    print("THIRTYONE exactly for %s"% pName(self.lastPlayer))
+                    self.endCount()
+                    break
+                pegCard = self.hands[self.currentPlayer].pegOneCard(self.total)
+
+                if (pegCard): #played something
+                    self.cardPlayed(pegCard)
+                else:
+                    print("No play possible for player: %s"  % pName(self.currentPlayer))
+                    #if self.total == 0: #nothing more to play
+                    #    #print("NOTHIGN MORE TO PLAY AT ALL!")
+                    #    return 0
+                    if self.currentPlayer is not self.lastPlayer: #still give lP chance to play
+                        #print("give %s another chance" % pName(self.lastPlayer))
+                        self.currentPlayer = switchPlayer(self.currentPlayer)
+                        continue
+                    elif self.currentPlayer is self.lastPlayer: #Other player already known: NO CARDS
+                        #print("None played by %s, COUNT OVER" % pName(self.lastPlayer))
+                        self.endCount()
+                        break
+                    else:
+                        print("\n\nNEVER HERE\n\n\n\n\n\n\n\n")
+        print("exiting peg>>>>>>>>\n\n")
+        return 1
 class game:
     def __init__(self):
         self.points = [0,0]
@@ -80,8 +134,8 @@ class hand:
             if self.played(i) == 0:
                 left += 1
         return left
-    def pegOneCard(self,total):     ## returns card, if peg possible
-                                    ## returns 0, if NO peg possible
+    def pegOneCard(self,total):     ## returns card VALUE, if peg possible
+                                    ## returns 0,          if NO peg possible
         highValue = 0
         #pegCardId = 0
         for i in range (0,HANDSIZE):
@@ -115,71 +169,10 @@ class hand:
                 print("discarding went horribly wrong")
                 return
             print("%s (%s)" % (self.cards[i].cardJson(), state))
-def pegRound(round):
-    player = switchPlayer(round.dealer) #NON dealer starts pegging
-    lastPlayer = player
-    #while (len(round.hands[ME].cards) > 0  \
-    #       and len(round.hands[OPP].cards) > 0):
-    while(round.hands[ME].cardsInHand() or round.hands[OPP].cardsInHand()):
-        total = 0
-        print("\nSTART PEG (start player: %s)" % pName(player))
-        while (total <= 31):
-            # FIRST CHECK IF 31, IN WHICH CASE POINTS GIVEN AND PLAYER CHANGED
-            if total == 31:
-                print("THIRTYONE exactly for %s"% pName(lastPlayer))
-                print("---------------")
-                #round.hands[ME].printHand()
-                #round.hands[OPP].printHand()
-                print("ENDING PLAYER: %s" % pName(lastPlayer))
-                player = switchPlayer(lastPlayer)  #means NEXT had order set up properly
-                print("(final31 %d) play again?"%total)
-                break
-
-            #print("About to determine if peg possible (pl: %s): %d" % (pName(player),total))
-            pegCard = round.hands[player].pegOneCard(total)
-
-            if (pegCard): #played something
-                total += pegCard
-                #print("(%s) played %d - total peg play: %d" % (pName(player), pegCard,total))
-                #print("player %d left: %d" %(player,round.hands[player].cardsInHand()))
-                lastPlayer = player
-                player = switchPlayer(player)
-                print("  %d  <peg card %d played>" % (total, pegCard))
-            #if (pegCard == 0):
-            else:
-                print("No play possible for player: %s"  % pName(player))
-                ## MEANS CURRENT PLAYER COULDN'T PLAY ANYTHING
-                # Needs: 1) 
-                
-                if total == 0: #nothing more to play
-                    print("NOTHIGN MORE TO PLAY AT ALL!")
-                    return 0
-                elif player is not lastPlayer: #still give lP chance to play
-                    print("give %s another chance" % pName(lastPlayer))
-                    player = switchPlayer(player)
-                    continue
-                elif player is lastPlayer: #Other player already known: NO CARDS
-                    print("None played by %s, COUNT OVER" % pName(lastPlayer))
-                    player = switchPlayer(lastPlayer) #ensure next NEW player is alt from last
-                    print("(final %d) play again?"%total)
-                    break
-                else:
-                    print("no more cards? %d and %d" % (round.hands[ME].cardsInHand(),round.hands[OPP].cardsInHand()))
-                    print("used to check for 31 here, but no longer necessary\n")
-                    #return 0
-            #else:
-                #player = switchPlayer(player)
-    print("exiting peg>>>>>>>>\n\n")
-    return 1
 def pName(player):
     if player:
         return "OPP"
     return "ME"
-def discard(round):
-    round.hands[ME].discard(0)
-    round.hands[ME].discard(1)
-    round.hands[OPP].discard(0)
-    round.hands[OPP].discard(1)
 def count(round):
     print("===========\nCOUNT IT UP! (nothing yet)\n==========")
     return
@@ -201,8 +194,8 @@ def play():
         #cutCard = oneRound.cut(GAME.deck)
         #print("cut!: ")
         printCard(oneRound.cutCard)
-        discard(oneRound)
-        if(not pegRound(oneRound)):
+        oneRound.discard()
+        if(not oneRound.pegRound()):
             print("\n********NNOOO*********COULDN'T PEG MORE")
             print("ME hand:")
             oneRound.hands[ME].printHand()
