@@ -26,10 +26,15 @@ class round:
     def __init__(self, dealer, hands, deck):
         self.dealer = dealer
         self.hands = hands
-        self.cutCard = deck.dealone("CUT-------------->") ##NAME OF PLAYER
         self.total = 0
         self.currentPlayer = dealer ##dealer a placeholder -- no initial value?
         self.lastPlayer    = dealer ##dealer a placeholder -- no initial value?
+
+        self.cutCard = deck.dealone("CUT") ##NAME OF PLAYER
+        printCard(self.cutCard)
+        self.hands[ME].cutCard  = self.cutCard
+        self.hands[OPP].cutCard = self.cutCard
+        self.discard()
     def cut(self):
         return self.cutCard
     def discard(self):
@@ -48,7 +53,7 @@ class round:
     def endCount(self):
         self.currentPlayer = switchPlayer(self.lastPlayer)
         print("ENDING PLAYER: %s" % pName(self.lastPlayer))
-        print("Final total: %d (play again?)\n" % self.total)
+        print("Final total: %d (play again?)" % self.total)
         
     def pegRound(self):
         self.currentPlayer = switchPlayer(self.dealer) #NON dealer starts pegging
@@ -57,7 +62,6 @@ class round:
             self.total = 0
             print("\nSTART PEG (start player: %s)" % pName(self.currentPlayer))
             while (self.total <= 31):
-                # FIRST CHECK IF 31, IN WHICH CASE POINTS GIVEN AND PLAYER CHANGED
                 if self.total == 31:
                     print("THIRTYONE exactly for %s"% pName(self.lastPlayer))
                     self.endCount()
@@ -68,9 +72,6 @@ class round:
                     self.cardPlayed(pegCard)
                 else:
                     print("No play possible for player: %s"  % pName(self.currentPlayer))
-                    #if self.total == 0: #nothing more to play
-                    #    #print("NOTHIGN MORE TO PLAY AT ALL!")
-                    #    return 0
                     if self.currentPlayer is not self.lastPlayer: #still give lP chance to play
                         #print("give %s another chance" % pName(self.lastPlayer))
                         self.currentPlayer = switchPlayer(self.currentPlayer)
@@ -98,13 +99,10 @@ class game:
 
 def deal(masterDeck):
     handsize=6
-    #masterDeck = deck()
     hands = []
-    #oneCard = card()
-    #player = "ME"
     for player in ("ME","OPP"):
         currentHand = hand(player)
-        print("\nHAND for %s:" % player)
+        print("HAND for %s:" % player)
         for i in range(0,handsize):
             oneCard = masterDeck.dealone(player)
             currentHand.addCard(oneCard)
@@ -116,6 +114,7 @@ class hand:
     def __init__(self,player):
         self.player=player  ## STRING
         self.cards = []
+        self.cut = ""
         #self.playedCards = [0]*HANDSIZE
     def addCard(self,card):
         self.cards.append(card)
@@ -153,28 +152,75 @@ class hand:
              (cardToPeg.cardValue(),cardStr))
         #printCard(self.cards[pegCardId])
         return cardToPeg.cardValue()
+    def count15s(self):
+        values = []
+        for card in self.cards:
+            if card.playedStatus >= 0: #if NOT discarded KITTEN
+                values.append(card.cardValue())
+        values.append(self.cutCard.cardValue())
+        print(values)
+        #myReturn = subsetsum(values, 15)
+        #print("OUT with myReturn (bool), got: %r" % myReturn)
+        myReturn2 = subset2(values, len(values), "", 15, 0)
+        print("OUT with myReturn2, got %d fifteens" % myReturn2)
+
+    def countHand(self):
+        #self.printHand()
+        print("\nActual hand:")
+        for card in self.cards:
+            if card.playedStatus >= 0: #if NOT discarded KITTEN
+                print("%s" % card.cardIdString())
+        print("%s" % self.cutCard.cardIdString())
+        self.count15s()
+
     def printHand(self):
         print("%s PEGGING HAND UPDATE:" % self.player)
         for i in range(0,HANDSIZE):
-            #if self.playedCards[i] == -1:
             if self.cards[i].playedStatus == -1:
                 state = "discarded KITTEN"
-            #elif self.playedCards[i] == 0:
             elif self.cards[i].playedStatus == 0:
                 state = "in hand"
-            #elif self.playedCards[i] == 1:
             elif self.cards[i].playedStatus == 1:
-                state = "played in pegging"
+                state = "pegged"
             else:
                 print("discarding went horribly wrong")
                 return
             print("%s (%s)" % (self.cards[i].cardJson(), state))
+def subsetsum(array, num):
+        if num == 0 or num < 1:
+            return None
+        elif len(array) == 0:
+            return None
+        else:
+            if array[0] == num:
+                return [array[0]]
+            else:
+                with_v = subsetsum(array[1:],(num - array[0])) 
+                if with_v:
+                    return [array[0]] + with_v
+                else:
+                    return subsetsum(array[1:],num)
+def subset2(list, n, subset, sum, occurs):
+    if sum == 0:
+        print subset
+        return 1
+    if n == 0:
+        return 0
+    if list[n-1] <= sum:
+        occurs += subset2(list, n-1, subset, sum, occurs)
+        occurs += subset2(list, n-1, subset+`list[n-1]`+" ", sum-list[n-1], occurs)
+    else:
+        occurs += subset2(list, n-1, subset, sum, occurs)
+    return occurs
 def pName(player):
     if player:
         return "OPP"
     return "ME"
 def count(round):
-    print("===========\nCOUNT IT UP! (nothing yet)\n==========")
+    print("COUNT IT UP! (nothing yet)\n===========")
+    round.hands[ME].countHand()
+    round.hands[OPP].countHand()
+
     return
 def switchPlayer(dealerPlayer):
     return not dealerPlayer
@@ -186,23 +232,26 @@ def play():
     roundNo = 0
     #print("gameover: %d" % GAME.gameOver())
     while (GAME.gameOver() < 0):
-        print("\nstart round %d, dealer: %s" %(roundNo,pName(dealerPlayer)))
+        print("\n\n\n=======\n=======\nStart round %d!! (Dealer: %s)" % \
+              (roundNo,pName(dealerPlayer)))
         GAME.shuffle()
         hands = deal(GAME.deck)
 
         oneRound = round(dealerPlayer,hands, GAME.deck)
-        #cutCard = oneRound.cut(GAME.deck)
-        #print("cut!: ")
-        printCard(oneRound.cutCard)
-        oneRound.discard()
-        if(not oneRound.pegRound()):
-            print("\n********NNOOO*********COULDN'T PEG MORE")
-            print("ME hand:")
-            oneRound.hands[ME].printHand()
-            print("OPP hand:")
-            oneRound.hands[OPP].printHand()
+        #printCard(oneRound.cutCard)
+        #oneRound.discard()
+
+        #if(not oneRound.pegRound()):
+        #    print("\n********NNOOO*********COULDN'T PEG MORE")
+        #    print("ME hand:")
+        #    oneRound.hands[ME].printHand()
+        #    print("OPP hand:")
+        #    oneRound.hands[OPP].printHand()
         #else:
         #    print("should never get here, delete evntually")
+
+
+        oneRound.pegRound()
         count(oneRound)
         dealerPlayer = switchPlayer(dealerPlayer)
         roundNo += 1
