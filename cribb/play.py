@@ -1,5 +1,6 @@
 from utils import *
 from random import randint
+import sys
 
 ME = 0
 OPP = 1
@@ -84,6 +85,12 @@ class round:
                         print("\n\nNEVER HERE\n\n\n\n\n\n\n\n")
         print("exiting peg>>>>>>>>\n\n")
         return 1
+    def count(self):
+        print("COUNT IT UP! (in construction..)\n===========")
+        pointsME  = self.hands[ME].countHand()
+        pointsOPP = self.hands[OPP].countHand()
+        print("For the ROUND, ME scores %d and OPP scores %d" % (pointsME,pointsOPP))
+        return
 class game:
     def __init__(self):
         self.points = [0,0]
@@ -152,40 +159,78 @@ class hand:
              (cardToPeg.cardValue(),cardStr))
         #printCard(self.cards[pegCardId])
         return cardToPeg.cardValue()
-    def count15s(self):
-        values = []
-        for card in self.cards:
-            if card.playedStatus >= 0: #if NOT discarded KITTEN
-                values.append(card.cardValue())
-        values.append(self.cutCard.cardValue())
-        print(values)
-        #myReturn = subsetsum(values, 15)
-        #print("OUT with myReturn (bool), got: %r" % myReturn)
-        myReturn2 = subset2(values, len(values), "", 15, 0)
-        print("OUT with myReturn2, got %d fifteens" % myReturn2)
 
     def countHand(self):
-        #self.printHand()
+        handTotal = 0
+        #printHand(self.cards)
         print("\nActual hand:")
-        for card in self.cards:
-            if card.playedStatus >= 0: #if NOT discarded KITTEN
-                print("%s" % card.cardIdString())
-        print("%s" % self.cutCard.cardIdString())
-        self.count15s()
+        #for card in self.cards:
+        #    if card.playedStatus >= 0: #if NOT discarded KITTEN
+        #        print("%s" % card.cardIdString())
+        #print("%s" % self.cutCard.cardIdString())
+        fullHand = fullHandWithCut(self.cards, self.cutCard)
+        printHand(fullHand.cards)
+        handTotal += count15s(fullHand.cards)
+        handTotal += countPairs(fullHand.cards)
+        handTotal += countRuns(fullHand.cards)
+        handTotal += countFlush(fullHand.cards)
+        handTotal += countSpJack(fullHand.cards)
+        return handTotal
 
-    def printHand(self):
-        print("%s PEGGING HAND UPDATE:" % self.player)
-        for i in range(0,HANDSIZE):
-            if self.cards[i].playedStatus == -1:
-                state = "discarded KITTEN"
-            elif self.cards[i].playedStatus == 0:
-                state = "in hand"
-            elif self.cards[i].playedStatus == 1:
-                state = "pegged"
-            else:
-                print("discarding went horribly wrong")
-                return
-            print("%s (%s)" % (self.cards[i].cardJson(), state))
+def returnKeptCards(cards):
+    keptCards = []
+    for card in cards:
+        if card.playedStatus >= 0: #if NOT discarded KITTEN
+            keptCards.append(card)
+            #print(card.cardJson())
+    if len(keptCards) != 4:  ##HARD CODED CONSTANT, NEVER CHANGES
+        print("ERROR in returnKeptCards")
+        sys.exit()
+    return keptCards
+        
+def count15s(hand):
+    print("Counting points from 15s..")
+    cardValues = []
+    for card in hand:
+        #if card.playedStatus >= 0: #if NOT discarded KITTEN
+        cardValues.append(card.cardValue())
+    print(cardValues)
+    #myReturn = subsetsum(cardValues, 15)
+    #print("OUT with myReturn (bool), got: %r" % myReturn)
+    myReturn2 = subset2(cardValues, len(cardValues), "", 15, 0)
+    print("OUT with myReturn2, got %d fifteens" % myReturn2)
+    return myReturn2
+def countPairs(hand):
+    print("Counting points from pairs..")
+    return 0
+def countRuns(hand):
+    print("Counting points from runs..")
+    return 0
+def countFlush(hand):
+    print("Counting points from flush..")
+    return 0
+def countSpJack(hand):
+    print("Counting points from spJack..")
+    return 0
+
+def printHand(cards):
+    for card in cards:
+        if card.playedStatus == -1:
+            state = "discarded KITTEN"
+        elif card.playedStatus == 0:
+            state = "in hand"
+        elif card.playedStatus == 1:
+            state = "pegged"
+        else:
+            print("discarding went horribly wrong")
+            return
+        print("%s (%s)" % (card.cardJson(), state))
+class fullHandWithCut:
+    def __init__(self,cards,cut):
+        self.cards = returnKeptCards(cards)
+        self.cards.append(cut)
+    def printFullHand(self):
+        printHand(self.cards)
 def subsetsum(array, num):
         if num == 0 or num < 1:
             return None
@@ -216,12 +261,6 @@ def pName(player):
     if player:
         return "OPP"
     return "ME"
-def count(round):
-    print("COUNT IT UP! (nothing yet)\n===========")
-    round.hands[ME].countHand()
-    round.hands[OPP].countHand()
-
-    return
 def switchPlayer(dealerPlayer):
     return not dealerPlayer
 def play():
@@ -252,7 +291,7 @@ def play():
 
 
         oneRound.pegRound()
-        count(oneRound)
+        oneRound.count()
         dealerPlayer = switchPlayer(dealerPlayer)
         roundNo += 1
         if roundNo > 2:
