@@ -4,6 +4,8 @@ import sys
 
 ME = 0
 OPP = 1
+INAROWMIN = 2
+NUMBEROFDRAWS = 100
 HANDSIZE = 6
 print("==========================\nStarting play\n=============\n")
 
@@ -163,7 +165,7 @@ class hand:
     def countHand(self):
         handTotal = 0
         #printHand(self.cards)
-        print("\nActual hand:")
+        print("\n\n\nActual hand:")
         #for card in self.cards:
         #    if card.playedStatus >= 0: #if NOT discarded KITTEN
         #        print("%s" % card.cardIdString())
@@ -200,12 +202,75 @@ def count15s(hand):
     myReturn2 = subset2(cardValues, len(cardValues), "", 15, 0)
     print("OUT with myReturn2, got %d fifteens" % myReturn2)
     return myReturn2
+        
 def countPairs(hand):
     print("Counting points from pairs..")
     return 0
+gloRun=0
+def runsUtil(hand, baseCard):
+    global gloRun
+    #print("In Utils(%d), bCrd: %s" % (len(hand),baseCard.cardJson()))
+    print("In Utils(%d), bCrd#: %s" % (len(hand),gloRun))
+    if len(hand) == 0:
+        return 1
+    handId = 0
+    checkRest = list(hand)
+    print("\nhand:")
+    printHand(hand)
+    print("checkRest:")
+    printHand(checkRest)
+    #printHand(hand)
+    print(" ")
+    inARow = 1
+    for card in hand:
+        checkRest = list(hand)
+        if len(checkRest) <= handId:
+            print("CAUGHT UP wiht you!")
+            print("WHAT'S WRONG: handId: %d, len checkRest: %d"%(handId,len(checkRest)))
+            printHand(checkRest)
+            break
+        #print("  %d checked as the next in run %d" % (card.cardNum,baseCard.cardNum+1))
+        print("  %d checked as the next in run %d" % (card.cardNum,gloRun + 1))
+        #if it is a run, add to the row# and recheck with
+        # new card and card removed from hand
+        #if card.cardNum == baseCard.cardNum + 1:
+        if card.cardNum == gloRun + 1:
+            print("\nRUN")
+            gloRun += 1
+            cardInARow = card
+            print("before glorious remove: %d" % len(checkRest))
+            del checkRest[handId]
+            #### NOT just delete from current hand (checkRest)
+            ## but delete from ORIGINAL hand and resubmit next check with orig hand
+            ## maybe don't remove hards for recursion?
+            ## NO -- further runs need to be discovered as recursion unravels
+            print("after glorious remove: %d" % len(checkRest))
+            inARow = runsUtil(checkRest, cardInARow) + 1
+        #if not a run, don't increase row # and recheck with SAME base
+        # but hand with card removed
+        else:
+            #print("before del: %d and checkR: %d" % (len(hand),len(checkRest)))
+            #print("handId: %d, len checkRest: %d"%(handId,len(checkRest)))
+            #del checkRest[handId]
+            print("Not a run, check on! (%d)" % len(hand))
+            #inARow = runsUtil(checkRest,gloRun)
+        print("EVER GET HERE?(%d)" % len(hand))
+        handId += 1
+        #if (len(hand) > 1):
+        #print("bottom of for: %d and checkR: %d" % (len(hand),len(checkRest)))
+        #print("----------card.cardNum: %d and baseCard.cardNum: %d" % (card.cardNum,baseCard.cardNum))
+    print("inARow==> %d" % inARow)
+    return inARow
 def countRuns(hand):
+    global gloRun
     print("Counting points from runs..")
-    return 0
+    print("Hand size (in countRuns): %d" % len(hand[1:]))
+    gloRun=hand[0].cardNum
+    inARow = runsUtil(hand[1:], hand[0])
+    print("FOUND %d IN A ROW!!" % inARow)
+    if inARow > INAROWMIN:
+        sys.exit()
+    return inARow
 def countFlush(hand):
     print("Counting points from flush..")
     return 0
@@ -294,7 +359,8 @@ def play():
         oneRound.count()
         dealerPlayer = switchPlayer(dealerPlayer)
         roundNo += 1
-        if roundNo > 2:
+        #if roundNo > 2:
+        if roundNo > NUMBEROFDRAWS:
             break
 
 # main
