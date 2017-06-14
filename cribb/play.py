@@ -156,8 +156,7 @@ class cardsDealt:
                 if self.handAll[i].cardValue() > highValue:
                     cardToPeg = self.handAll[i]
                     highValue = cardToPeg.cardValue()
-        if highValue == 0:
-            #print("(no more high card %s)" % self.player)
+        if highValue == 0:          ## No more cards to play
             return 0
         cardToPeg.playedStatus = 1             ######### 1 == PLAYED
         cardStr = cardToPeg.cardIdString()
@@ -166,6 +165,7 @@ class cardsDealt:
         return cardToPeg.cardValue()
 
     def countHand(self):
+        print("\n******New Hand****** COUNT ALL POINT TYPES:")
         handTotal = 0
         #print("\n\n\nActual cardsDealt:")
         handToCount = self.handWithCut
@@ -207,7 +207,9 @@ def countPairs(hand):
 gloRun=0
 def runsUtil(cardsMaster, baseCard):
     global gloRun
-    print("In runsUtil len(cardsMaster):%d, baseCard#: %s" % (len(cardsMaster),gloRun))
+    #print("In runsUtil len(cardsMaster):%d, baseCard#: %s" % (len(cardsMaster),gloRun))
+    print("Start recursive check (cards left to check: %d),"\
+            " compare against (baseCard): %s" % (len(cardsMaster),gloRun))
     if len(cardsMaster) == 0:
         return 1
     handId = 0
@@ -215,38 +217,28 @@ def runsUtil(cardsMaster, baseCard):
     inARow = 1
     for card in cardsMaster:
         remainingCards = list(cardsMaster) ##DEEP COPY of the hand
-        print("\nProcessing %s, hand:" % card.cardIdString())              ##DEBUG
-        printHand(cardsMaster)        ##DEBUG
-        print("remainingCards:")           ##DEBUG
-        printHand(remainingCards)          ##DEBUG
-        print(" ")                    ##DEBUG
+        #print("\nProcessing %s, hand:" % card.cardIdString())              ##DEBUG
+        #printHand(cardsMaster)        ##DEBUG
+        #print("remainingCards:")           ##DEBUG
+        #printHand(remainingCards)          ##DEBUG
+        #print(" ")                    ##DEBUG
         if len(remainingCards) <= handId:
-            #print("CAUGHT UP wiht you!")
-            #print("WHAT'S WRONG: handId: %d, len remainingCards: %d"%(handId,len(remainingCards)))
-            #printHand(remainingCards)
             ## Finished checking hand, since handId iterator reched len(remainingCards)
             break
-        print("  %d checked as the next in run %d" % (card.cardNum,gloRun + 1))
+        print("  %d checked as the next in run (needed to match %d)" % \
+                (card.cardNum,gloRun + 1))
         #if it is a run, add to the row# and recheck with
         # new card and card removed from hand
-        #if card.cardNum == baseCard.cardNum + 1:
         if card.cardNum == gloRun + 1:
-            print("\n****************RRRRRUN of %s following %d" % \
+            print("****************RRRRRUN of %s following %d" % \
                     (card.cardIdString(),gloRun))
             gloRun += 1
             cardInARow = card
             del remainingCards[handId]
-            #### NOT just delete from current hand (remainingCards)
-            ## but delete from ORIGINAL hand and resubmit next check with orig hand
-            ## maybe don't remove hards for recursion?
-            ## NO -- further runs need to be discovered as recursion unravels
             inARow = runsUtil(remainingCards, cardInARow) + 1
+        #else: ## Not a run, check on!
         #if not a run, don't increase row # and recheck with SAME base
         # but hand with card removed
-        else:
-            #del remainingCards[handId]
-            print("Not a run, check on! (%d)" % len(cardsMaster))
-            #inARow = runsUtil(remainingCards,gloRun)
         handId += 1
     #print("inARow==> %d" % inARow)
     return inARow
