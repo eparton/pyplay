@@ -7,6 +7,9 @@ OPP = 1
 INAROWMIN = 2
 NUMBEROFDRAWS = 100
 HANDSIZE = 6
+HAND6 = 6
+HAND5WITHCUT = 5
+HAND4WITHOUTCUT = 4
 print("==========================\nStarting play\n=============\n")
 
 class deck:
@@ -30,16 +33,19 @@ class round:
         self.dealer = dealer
         self.hands = hands
         self.total = 0
-        self.currentPlayer = dealer ##dealer a placeholder -- no initial value?
-        self.lastPlayer    = dealer ##dealer a placeholder -- no initial value?
-
-        self.cutCard = deck.dealone("CUT") ##NAME OF PLAYER
-        printCard(self.cutCard)
-        self.hands[ME].cutCard  = self.cutCard
-        self.hands[OPP].cutCard = self.cutCard
+        ##dealer a placeholder -- no initial value?
+        self.currentPlayer = dealer
+        self.lastPlayer    = dealer
         self.discard()
-    def cut(self):
-        return self.cutCard
+        self.setupCut(deck)
+    def setupCut(self, deck):
+        cutCard = deck.dealone("CUT") ##NAME OF PLAYER
+        print("just pulled cut card")
+        printCard(cutCard)
+        self.hands[ME].setCutCard(cutCard)
+        self.hands[OPP].setCutCard(cutCard)
+    #def cut(self):
+    #    return self.cutCard
     def discard(self):
         self.hands[ME].discard(0)
         self.hands[ME].discard(1)
@@ -123,7 +129,8 @@ class hand:
     def __init__(self,player):
         self.player=player  ## STRING
         self.cards = []
-        self.cut = ""
+        #self.cut = ""
+        self.fullHandWithCut = []
         #self.playedCards = [0]*HANDSIZE
     def addCard(self,card):
         self.cards.append(card)
@@ -132,6 +139,18 @@ class hand:
         self.cards[cardId].playedStatus = -1 #########-1 == IN KITTEN
         #print("discarding: %d" % self.cards[cardId].cardNum)
         #self.playedCards[cardId] = -1
+    def setCutCard(self, cut):
+        #print("In setCutCard, size of cards: %d" % len(self.cards))
+        #keptCards = returnKeptCards(self.cards)
+        keptCards = returnKeptCards(self.cards)
+        keptCards.append(cut)
+        #print("size of keptCards: %d" % len(keptCards))
+        #self.fullHandWithCut = keptCards.append(cut)
+        self.fullHandWithCut = keptCards
+        #self.fullHandWithCut = returnKeptCards(self.cards).append(cut)
+        #print("SET UP cut card!")
+        #printCards(self.fullHandWithCut)
+        #print("Done printing!@")
     def played(self,index):
         #played is 1, discarded is -1, return true if not 0
         return (self.cards[index].playedStatus != 0)
@@ -164,28 +183,34 @@ class hand:
 
     def countHand(self):
         handTotal = 0
-        #printHand(self.cards)
+        #printCards(self.cards)
         print("\n\n\nActual hand:")
         #for card in self.cards:
         #    if card.playedStatus >= 0: #if NOT discarded KITTEN
         #        print("%s" % card.cardIdString())
         #print("%s" % self.cutCard.cardIdString())
-        fullHand = fullHandWithCut(self.cards, self.cutCard)
-        printHand(fullHand.cards)
-        handTotal += count15s(fullHand.cards)
-        handTotal += countPairs(fullHand.cards)
-        handTotal += countRuns(fullHand.cards)
-        handTotal += countFlush(fullHand.cards)
-        handTotal += countSpJack(fullHand.cards)
+        #fullHand = fullHandWithCut(self.cards, self.cutCard)
+        cardsToCount = self.fullHandWithCut
+        printCards(cardsToCount)
+        handTotal += count15s(cardsToCount)
+        handTotal += countPairs(cardsToCount)
+        handTotal += countRuns(cardsToCount)
+        handTotal += countFlush(cardsToCount)
+        handTotal += countSpJack(cardsToCount)
         return handTotal
 
 def returnKeptCards(cards):
     keptCards = []
     for card in cards:
+        #print("treating cardNum: %d" % card.cardNum)
         if card.playedStatus >= 0: #if NOT discarded KITTEN
             keptCards.append(card)
+            #print("++++++")
+            #printCards(keptCards)
+            #print("------")
             #print(card.cardJson())
-    if len(keptCards) != 4:  ##HARD CODED CONSTANT, NEVER CHANGES
+    ##HARD CODED CONSTANT, NEVER CHANGES:
+    if len(keptCards) != HAND4WITHOUTCUT:
         print("ERROR in returnKeptCards")
         sys.exit()
     return keptCards
@@ -210,16 +235,16 @@ gloRun=0
 def runsUtil(hand, baseCard):
     global gloRun
     #print("In Utils(%d), bCrd: %s" % (len(hand),baseCard.cardJson()))
-    print("In Utils(%d), bCrd#: %s" % (len(hand),gloRun))
+    print("In runsUtil len(hand):%d, baseCard#: %s" % (len(hand),gloRun))
     if len(hand) == 0:
         return 1
     handId = 0
     checkRest = list(hand)
     print("\nhand:")
-    printHand(hand)
+    printCards(hand)
     print("checkRest:")
-    printHand(checkRest)
-    #printHand(hand)
+    printCards(checkRest)
+    #printCards(hand)
     print(" ")
     inARow = 1
     for card in hand:
@@ -227,7 +252,7 @@ def runsUtil(hand, baseCard):
         if len(checkRest) <= handId:
             print("CAUGHT UP wiht you!")
             print("WHAT'S WRONG: handId: %d, len checkRest: %d"%(handId,len(checkRest)))
-            printHand(checkRest)
+            printCards(checkRest)
             break
         #print("  %d checked as the next in run %d" % (card.cardNum,baseCard.cardNum+1))
         print("  %d checked as the next in run %d" % (card.cardNum,gloRun + 1))
@@ -238,14 +263,14 @@ def runsUtil(hand, baseCard):
             print("\nRUN")
             gloRun += 1
             cardInARow = card
-            print("before glorious remove: %d" % len(checkRest))
+            #print("before glorious remove: %d" % len(checkRest))
             del checkRest[handId]
             #### NOT just delete from current hand (checkRest)
             ## but delete from ORIGINAL hand and resubmit next check with orig hand
             ## maybe don't remove hards for recursion?
             ## NO -- further runs need to be discovered as recursion unravels
-            print("after glorious remove: %d" % len(checkRest))
-            inARow = runsUtil(checkRest, cardInARow) + 1
+            #print("after glorious remove: %d" % len(checkRest))
+            #inARow = runsUtil(checkRest, cardInARow) + 1
         #if not a run, don't increase row # and recheck with SAME base
         # but hand with card removed
         else:
@@ -254,17 +279,17 @@ def runsUtil(hand, baseCard):
             #del checkRest[handId]
             print("Not a run, check on! (%d)" % len(hand))
             #inARow = runsUtil(checkRest,gloRun)
-        print("EVER GET HERE?(%d)" % len(hand))
+        #print("EVER GET HERE?(%d)" % len(hand))
         handId += 1
         #if (len(hand) > 1):
         #print("bottom of for: %d and checkR: %d" % (len(hand),len(checkRest)))
         #print("----------card.cardNum: %d and baseCard.cardNum: %d" % (card.cardNum,baseCard.cardNum))
-    print("inARow==> %d" % inARow)
+    #print("inARow==> %d" % inARow)
     return inARow
 def countRuns(hand):
     global gloRun
     print("Counting points from runs..")
-    print("Hand size (in countRuns): %d" % len(hand[1:]))
+    #print("Hand size (in countRuns): %d" % len(hand[1:]))
     gloRun=hand[0].cardNum
     inARow = runsUtil(hand[1:], hand[0])
     print("FOUND %d IN A ROW!!" % inARow)
@@ -278,7 +303,7 @@ def countSpJack(hand):
     print("Counting points from spJack..")
     return 0
 
-def printHand(cards):
+def printCards(cards):
     for card in cards:
         if card.playedStatus == -1:
             state = "discarded KITTEN"
@@ -290,12 +315,12 @@ def printHand(cards):
             print("discarding went horribly wrong")
             return
         print("%s (%s)" % (card.cardJson(), state))
-class fullHandWithCut:
-    def __init__(self,cards,cut):
-        self.cards = returnKeptCards(cards)
-        self.cards.append(cut)
-    def printFullHand(self):
-        printHand(self.cards)
+#class fullHandWithCut:
+#    def __init__(self,cards,cut):
+#        self.cards = returnKeptCards(cards)
+#        self.cards.append(cut)
+#    def printFullHand(self):
+#        printCards(self.cards)
 def subsetsum(array, num):
         if num == 0 or num < 1:
             return None
@@ -348,9 +373,9 @@ def play():
         #if(not oneRound.pegRound()):
         #    print("\n********NNOOO*********COULDN'T PEG MORE")
         #    print("ME hand:")
-        #    oneRound.hands[ME].printHand()
+        #    oneRound.hands[ME].printCards()
         #    print("OPP hand:")
-        #    oneRound.hands[OPP].printHand()
+        #    oneRound.hands[OPP].printCards()
         #else:
         #    print("should never get here, delete evntually")
 

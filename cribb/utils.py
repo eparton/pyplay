@@ -20,10 +20,14 @@ class card:
                 'cardName' : self.cardName() }
     def cardIdString(self):
         return self.player + " --- " + self.cardName() + " of " + self.suit
+    #def cardJson(self):
+    #    return "{ 'player' : '" + self.player + "', " + \
+    #            " 'suit' : '"   + self.suit   + "', " + \
+    #            " 'cardName': '"+ self.cardName() + "' }"
     def cardJson(self):
-        return "{ 'player' : '" + self.player + "', " + \
-                " 'suit' : '"   + self.suit   + "', " + \
-                " 'cardName': '"+ self.cardName() + "' }"
+        return "{ 'player':'" + self.player + "', " + \
+                " 'suit':'"   + self.suit   + "', " + \
+                " 'cardName':'"+ self.cardName() + "' }"
     def cardName(self):
         if self.cardNum == 1:
             cardName = "Ace"
