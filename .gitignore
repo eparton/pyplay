@@ -1,1 +1,2 @@
-cribb/utils.pyc
+*.pyc
+cribb/*.pyc
