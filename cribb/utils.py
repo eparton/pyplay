@@ -28,47 +28,42 @@ def count15s(hand):
 def countPairs(hand):
     print("Counting points from pairs..")
     return 0
-gloRun=0
-def runsUtil(cardsMaster, baseCard):
-    global gloRun
-    print("Start recursive check (cards left to check: %d),"\
-            " compare against (baseCard): %s" % (len(cardsMaster),gloRun))
+### Doesn't work if the first card in the run is after the others!!
+def runsUtil(wholeHand, cardsMaster, currentHighest):
     if len(cardsMaster) == 0:
         return 1
     handId = 0
     inARow = 1
     for card in cardsMaster:
         remainingCards = list(cardsMaster) ##DEEP COPY of the hand
-        if len(remainingCards) <= handId:
-            ## Finished checking hand, since handId iterator reched len(remainingCards)
+        if len(remainingCards) <= handId:  ## Finished checking hand
             break
-        print("  %d checked as the next in run (needed to match %d)" % \
-                (card.cardNum,gloRun + 1))
+        #print("  %d checked as the next in run (needed to match %d)" % \
+        #        (card.cardNum,gloRun + 1))
         #if it is a run, add to the row# and recheck with
         # new card and card removed from hand
-        if card.cardNum == gloRun + 1:
+        #if card.cardNum == gloRun + 1:
+        if card.cardNum == currentHighest + 1:
             print("****************RRRRRUN of %s following %d" % \
-                    (card.cardIdString(),gloRun))
-            gloRun += 1
-            cardInARow = card
-            del remainingCards[handId]
-            inARow = runsUtil(remainingCards, cardInARow) + 1
+                    (card.cardIdString(),currentHighest))
+            currentHighest += 1
+            #remainingCards = list(wholeHand) ##DEEP COPY of the hand
+            del remainingCards[handId] ## delete matched card
+            inARow = runsUtil(wholeHand, remainingCards, currentHighest) + 1
         #else: ## Not a run, check on!
         #if not a run, don't increase row # and recheck with SAME base
         # but hand with card removed
         handId += 1
-    #print("inARow==> %d" % inARow)
     return inARow
 def countRuns(hand):
-    global gloRun
     print("Counting points from runs..")
-    #print("Hand size (in countRuns): %d" % len(hand[1:]))
-    gloRun=hand[0].cardNum
-    inARow = runsUtil(hand[1:], hand[0])
-    print("FOUND %d IN A ROW!!" % inARow)
-    if inARow >= INAROWMIN:
-        sys.exit()
-    return inARow
+    inARow = runsUtil(hand, hand[1:], hand[0].cardNum)
+    if inARow >= 3:
+        print("FOUND %d IN A ROW!!" % inARow)
+        if inARow >= INAROWMIN:
+            sys.exit()
+        return inARow
+    return 0
 def countFlush(hand):
     print("Counting points from flush..")
     return 0
