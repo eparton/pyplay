@@ -5,6 +5,10 @@ OPP = 1
 HANDSIZE = 6
 NUMPLAYERS = 2
 
+INKITTEN = -1
+INHAND   = 0
+PLAYED   = 1
+
 def switchPlayer(player):
     return (player + 1) % NUMPLAYERS
 

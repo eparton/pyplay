@@ -56,8 +56,8 @@ class round:
         self.cutCard = None
         self.pegTotal = 0
         ##dealer a placeholder -- no initial value?
-        self.currentPlayerId = dealer
-        self.lastPlayer    = dealer
+        self.currentPlayerId = None
+        self.lastPlayedId    = None
         self.deal()
         self.discard()
         self.setupCut()
@@ -104,36 +104,61 @@ class round:
     def pegRound(self):
         print("\nStart pegging.. (%d was dealer)" % self.dealer.playerID)
         self.currentPlayerId = switchPlayer(self.dealer.playerID)
+        self.lastPlayedId    = self.dealer.playerID
         print("Player now playing: %d" % self.currentPlayerId)
         while 1:
             done = 1
-            for player in self.game.players:
-                if player.hand.cardsInHand > 0:
-                    print("(at least player #%d has cards to play)" % player.playerID)
-                    done = self.pegOne(self.currentPlayerId)
+            #for player in self.game.players:
+            for playerIter in range(NUMPLAYERS):
+            	nextToPlayId = (self.lastPlayedId + playerIter + 1) % NUMPLAYERS
+            	player = self.game.players[nextToPlayId]
+            	#print("lastPlayedId: %d, nextToPlayId: %d, playerID: %d" % \
+            	#     (self.lastPlayedId,nextToPlayId, player.playerID))
+                if player.hand.cardsInHand() > 0:
+                    #print("(at least player #%d has cards to play)" % player.playerID)
+                    #done = self.pegOne(self.currentPlayerId)
+                    done = self.pegOne(player.playerID)
+                    #return of 0 means we played a card
+                    #once the other player returns 1, nothing to play, this resets!
+                    if done is 0:
+						#self.currentPlayerId = switchPlayer(self.dealer.playerID)
+						#print("ONE PLAYED, must restart")
+						break
                     #done = 0
             if done:
-                print("NO MORE CARDS, exiting pegRound")
+                print("===> %d -- NO MORE CARDS, exiting pegRound\nRemaining cards:" % self.pegTotal)
+                for player in self.game.players:
+                	for card in player.hand.cards:
+                		if card.playedStatus is INHAND:
+                			print("Player %d leaves behind: %s" % (player.playerID,printCard(card)))
                 return
     def pegOne(self, pID):
         for i in range(NUMPLAYERS):
-            pegAttemptPlayerID = pID
-            print("Continuing peg (total: %d) for player: %d" % (self.pegTotal,pegAttemptPlayerID))
+            pegAttemptPlayerID = (pID + i) % NUMPLAYERS
+            
+            #print("Cont (total: %d) for player (started turn): %d, and player (check): %d" % \
+            #      (self.pegTotal,pegAttemptPlayerID,i))
+            #player = self.game.players[pegAttemptPlayerID]
             player = self.game.players[pegAttemptPlayerID]
             for card in player.hand.cards:
-                print("setting up for peg attempt: %d, %d, %d" % (card.playedStatus,card.countValue(),self.pegTotal))
+                #print("setting up for peg attempt: %d, %d, %d" % (card.playedStatus,card.countValue(),self.pegTotal))
                 cardStr = printCard(card)
-                if (card.playedStatus == 0) and (card.countValue() + self.pegTotal <= 31):
-                    print("->WILL PLAY: %s" % cardStr)
+                if (card.playedStatus == INHAND) and \
+                   (card.countValue() +  self.pegTotal <= 31):
                     #printCard(card)
-                    card.playedStatus = 1
+                    card.playedStatus = PLAYED
                     self.pegTotal += card.countValue()
+                    print("->WILL PLAY (player: %d): %s -- Total: %d" % \
+                          (player.playerID,cardStr,self.pegTotal))
+                    self.lastPlayedId = self.currentPlayerId
                     self.currentPlayerId = switchPlayer(self.currentPlayerId)
+                    ## 0 means we played a card
                     return 0
-                    break ##so that this player doesn't play any more
+                    #break ##so that this player doesn't play any more
                 else:
                     pass
                     #print("can't play THIS card")
-            print("(nothing left to play)")
-            return 1
+            self.currentPlayerId = switchPlayer(self.currentPlayerId)
+        print("(nothing left to play)")
+        return 1
 
