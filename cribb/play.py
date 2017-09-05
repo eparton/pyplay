@@ -28,6 +28,7 @@ def play():
         roundNo += 1
         if roundNo > NUMBEROFROUNDS:
             break
-    print("GAME ENDED, player %d wins!" % GAME.gameOver())
+    #print("GAME ENDED, player %d wins!" % GAME.gameOver())
+    
 # main
 play()

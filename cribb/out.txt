@@ -1,0 +1,4214 @@
+==========================
+Starting play
+=============
+
+
+
+
+=======
+=======
+Start round 0!! (Dealer: ME)
+HAND for ME:
+ME --- 10 of spades
+ME --- 2 of hearts
+ME --- Ace of clubs
+ME --- 9 of hearts
+ME --- 4 of diamonds
+ME --- 2 of clubs
+HAND for OPP:
+OPP --- King of clubs
+OPP --- 4 of spades
+OPP --- 10 of diamonds
+OPP --- 4 of hearts
+OPP --- 8 of hearts
+OPP --- 4 of clubs
+CUT --- 5 of hearts
+
+START PEG (start player: OPP)
+[Pegging: 10 ---  OPP --- 10 of diamonds]
+  10  <peg card 10 played>
+[Pegging: 9 ---  ME --- 9 of hearts]
+  19  <peg card 9 played>
+[Pegging: 8 ---  OPP --- 8 of hearts]
+  27  <peg card 8 played>
+[Pegging: 4 ---  ME --- 4 of diamonds]
+  31  <peg card 4 played>
+THIRTYONE exactly for ME
+ENDING PLAYER: ME
+Final total: 31 (play again?)
+
+START PEG (start player: OPP)
+[Pegging: 4 ---  OPP --- 4 of hearts]
+  4  <peg card 4 played>
+[Pegging: 2 ---  ME --- 2 of clubs]
+  6  <peg card 2 played>
+[Pegging: 4 ---  OPP --- 4 of clubs]
+  10  <peg card 4 played>
+[Pegging: 1 ---  ME --- Ace of clubs]
+  11  <peg card 1 played>
+No play possible for player: OPP
+No play possible for player: ME
+ENDING PLAYER: ME
+Final total: 11 (play again?)
+exiting peg>>>>>>>>
+
+
+COUNT IT UP! (in construction..)
+===========
+
+
+
+Actual hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': 'Ace' } (pegged)
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+Counting points from 15s..
+[1, 9, 4, 2, 5]
+2 4 9 
+5 9 1 
+OUT with myReturn2, got 191 fifteens
+Counting points from pairs..
+Counting points from runs..
+Hand size (in countRuns): 4
+In Utils(4), bCrd#: 1
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  9 checked as the next in run 2
+handId: 0, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 1
+
+hand:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  4 checked as the next in run 2
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 1
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  2 checked as the next in run 2
+
+RUN
+before glorious remove: 2
+after glorious remove: 2
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  5 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  5 checked as the next in run 3
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+ 
+  2 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  2 checked as the next in run 3
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  4 checked as the next in run 3
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  5 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  5 checked as the next in run 3
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  5 checked as the next in run 3
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+ 
+  4 checked as the next in run 3
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+ 
+  2 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  2 checked as the next in run 3
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+  4 checked as the next in run 3
+handId: 1, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  9 checked as the next in run 3
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  2 checked as the next in run 3
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  5 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  5 checked as the next in run 3
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+ 
+  2 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  2 checked as the next in run 3
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  9 checked as the next in run 3
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  5 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  5 checked as the next in run 3
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+ 
+  9 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  5 checked as the next in run 3
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+ 
+  9 checked as the next in run 3
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+ 
+  2 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  2 checked as the next in run 3
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+ 
+  9 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+  2 checked as the next in run 3
+handId: 2, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  9 checked as the next in run 3
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  4 checked as the next in run 3
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  5 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  5 checked as the next in run 3
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  4 checked as the next in run 3
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  9 checked as the next in run 3
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  5 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  5 checked as the next in run 3
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+ 
+  9 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  5 checked as the next in run 3
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+ 
+  9 checked as the next in run 3
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  4 checked as the next in run 3
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+ 
+  9 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+  5 checked as the next in run 3
+handId: 3, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+ 
+  9 checked as the next in run 3
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+ 
+  4 checked as the next in run 3
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+ 
+  2 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  2 checked as the next in run 3
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  4 checked as the next in run 3
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+ 
+  9 checked as the next in run 3
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+ 
+  2 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  2 checked as the next in run 3
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+ 
+  9 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  2 checked as the next in run 3
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+ 
+  9 checked as the next in run 3
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  4 checked as the next in run 3
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 2
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '9' } (pegged)
+ 
+  9 checked as the next in run 3
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 2
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+inARow==> 1
+FOUND 1 IN A ROW!!
+Counting points from flush..
+Counting points from spJack..
+
+
+
+Actual hand:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+Counting points from 15s..
+[10, 4, 8, 4, 5]
+5 10 
+OUT with myReturn2, got 36 fifteens
+Counting points from pairs..
+Counting points from runs..
+Hand size (in countRuns): 4
+In Utils(4), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  8 checked as the next in run 11
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  5 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  5 checked as the next in run 11
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  4 checked as the next in run 11
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  8 checked as the next in run 11
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  5 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  5 checked as the next in run 11
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+ 
+  8 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  5 checked as the next in run 11
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+ 
+  8 checked as the next in run 11
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  4 checked as the next in run 11
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+ 
+  8 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+  8 checked as the next in run 11
+handId: 1, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  5 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  5 checked as the next in run 11
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  4 checked as the next in run 11
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  5 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  5 checked as the next in run 11
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  5 checked as the next in run 11
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  4 checked as the next in run 11
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+  4 checked as the next in run 11
+handId: 2, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  8 checked as the next in run 11
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  5 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  5 checked as the next in run 11
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+ 
+  8 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  8 checked as the next in run 11
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'hearts',  'cardName': '5' } (in hand)
+ 
+  5 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  5 checked as the next in run 11
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  5 checked as the next in run 11
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+ 
+  8 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  8 checked as the next in run 11
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+  5 checked as the next in run 11
+handId: 3, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+ 
+  8 checked as the next in run 11
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  4 checked as the next in run 11
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+ 
+  8 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  8 checked as the next in run 11
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  4 checked as the next in run 11
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  4 checked as the next in run 11
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '8' } (pegged)
+ 
+  8 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  8 checked as the next in run 11
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 10
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '4' } (pegged)
+ 
+  4 checked as the next in run 11
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 10
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+inARow==> 1
+FOUND 1 IN A ROW!!
+Counting points from flush..
+Counting points from spJack..
+For the ROUND, ME scores 192 and OPP scores 37
+
+
+
+=======
+=======
+Start round 1!! (Dealer: OPP)
+HAND for ME:
+ME --- Jack of clubs
+ME --- 4 of spades
+ME --- 8 of clubs
+ME --- 3 of hearts
+ME --- 2 of spades
+ME --- 10 of clubs
+HAND for OPP:
+OPP --- 2 of hearts
+OPP --- 6 of hearts
+OPP --- 2 of diamonds
+OPP --- 7 of clubs
+OPP --- Queen of spades
+OPP --- 3 of spades
+CUT --- 10 of spades
+
+START PEG (start player: ME)
+[Pegging: 10 ---  ME --- 10 of clubs]
+  10  <peg card 10 played>
+[Pegging: 10 ---  OPP --- Queen of spades]
+  20  <peg card 10 played>
+[Pegging: 8 ---  ME --- 8 of clubs]
+  28  <peg card 8 played>
+[Pegging: 3 ---  OPP --- 3 of spades]
+  31  <peg card 3 played>
+THIRTYONE exactly for OPP
+ENDING PLAYER: OPP
+Final total: 31 (play again?)
+
+START PEG (start player: ME)
+[Pegging: 3 ---  ME --- 3 of hearts]
+  3  <peg card 3 played>
+[Pegging: 7 ---  OPP --- 7 of clubs]
+  10  <peg card 7 played>
+[Pegging: 2 ---  ME --- 2 of spades]
+  12  <peg card 2 played>
+[Pegging: 2 ---  OPP --- 2 of diamonds]
+  14  <peg card 2 played>
+No play possible for player: ME
+No play possible for player: OPP
+ENDING PLAYER: OPP
+Final total: 14 (play again?)
+exiting peg>>>>>>>>
+
+
+COUNT IT UP! (in construction..)
+===========
+
+
+
+Actual hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '8' } (pegged)
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+Counting points from 15s..
+[8, 3, 2, 10, 10]
+10 2 3 
+10 2 3 
+OUT with myReturn2, got 18 fifteens
+Counting points from pairs..
+Counting points from runs..
+Hand size (in countRuns): 4
+In Utils(4), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  3 checked as the next in run 9
+handId: 0, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  2 checked as the next in run 9
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  10 checked as the next in run 9
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  10 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  10 checked as the next in run 9
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+ 
+  10 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  10 checked as the next in run 9
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  2 checked as the next in run 9
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  10 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  10 checked as the next in run 9
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+ 
+  2 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  10 checked as the next in run 9
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+ 
+  2 checked as the next in run 9
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+ 
+  10 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  10 checked as the next in run 9
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+ 
+  2 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+  2 checked as the next in run 9
+handId: 1, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  3 checked as the next in run 9
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  10 checked as the next in run 9
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  10 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  10 checked as the next in run 9
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+ 
+  10 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  10 checked as the next in run 9
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  3 checked as the next in run 9
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  10 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  10 checked as the next in run 9
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+ 
+  3 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  10 checked as the next in run 9
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+ 
+  3 checked as the next in run 9
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+ 
+  10 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  10 checked as the next in run 9
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+ 
+  3 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+  10 checked as the next in run 9
+handId: 2, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  3 checked as the next in run 9
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  2 checked as the next in run 9
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  10 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  10 checked as the next in run 9
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+ 
+  2 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  2 checked as the next in run 9
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  3 checked as the next in run 9
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  10 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  10 checked as the next in run 9
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+ 
+  3 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  10 checked as the next in run 9
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+ 
+  3 checked as the next in run 9
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+ 
+  2 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  2 checked as the next in run 9
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+ 
+  3 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+  10 checked as the next in run 9
+handId: 3, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+ 
+  3 checked as the next in run 9
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+ 
+  2 checked as the next in run 9
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+ 
+  10 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  10 checked as the next in run 9
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+ 
+  2 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  2 checked as the next in run 9
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+ 
+  3 checked as the next in run 9
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '10' } (pegged)
+ 
+  10 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  10 checked as the next in run 9
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+ 
+  3 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  10 checked as the next in run 9
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+ 
+  3 checked as the next in run 9
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '2' } (pegged)
+ 
+  2 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  2 checked as the next in run 9
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 8
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+ 
+  3 checked as the next in run 9
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 8
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+inARow==> 1
+FOUND 1 IN A ROW!!
+Counting points from flush..
+Counting points from spJack..
+
+
+
+Actual hand:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '2' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+Counting points from 15s..
+[2, 7, 10, 3, 10]
+3 10 2 
+10 3 2 
+OUT with myReturn2, got 18 fifteens
+Counting points from pairs..
+Counting points from runs..
+Hand size (in countRuns): 4
+In Utils(4), bCrd#: 2
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  7 checked as the next in run 3
+handId: 0, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 2
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  12 checked as the next in run 3
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 2
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  3 checked as the next in run 3
+
+RUN
+before glorious remove: 2
+after glorious remove: 2
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  10 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+ 
+  3 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  3 checked as the next in run 4
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  12 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  10 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+ 
+  12 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  10 checked as the next in run 4
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+ 
+  12 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+ 
+  3 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  3 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+ 
+  12 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+  12 checked as the next in run 4
+handId: 1, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  7 checked as the next in run 4
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  3 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  10 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+ 
+  3 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  3 checked as the next in run 4
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  7 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  10 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+ 
+  7 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  10 checked as the next in run 4
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+ 
+  7 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+ 
+  3 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  3 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+ 
+  7 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+  3 checked as the next in run 4
+handId: 2, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  7 checked as the next in run 4
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  12 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  10 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+ 
+  12 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  12 checked as the next in run 4
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  7 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': '10' } (in hand)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  10 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+ 
+  7 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  10 checked as the next in run 4
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+ 
+  7 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+ 
+  12 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  12 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+ 
+  7 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+  10 checked as the next in run 4
+handId: 3, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+ 
+  7 checked as the next in run 4
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+ 
+  12 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+ 
+  3 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  3 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+ 
+  12 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  12 checked as the next in run 4
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+ 
+  7 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '3' } (pegged)
+ 
+  3 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  3 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+ 
+  7 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  3 checked as the next in run 4
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+ 
+  7 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': 'Queen' } (pegged)
+ 
+  12 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  12 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'clubs',  'cardName': '7' } (pegged)
+ 
+  7 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+inARow==> 1
+FOUND 1 IN A ROW!!
+Counting points from flush..
+Counting points from spJack..
+For the ROUND, ME scores 19 and OPP scores 19
+
+
+
+=======
+=======
+Start round 2!! (Dealer: ME)
+HAND for ME:
+ME --- 8 of hearts
+ME --- Ace of spades
+ME --- 6 of diamonds
+ME --- King of hearts
+ME --- 2 of clubs
+ME --- 9 of spades
+HAND for OPP:
+OPP --- 7 of spades
+OPP --- 10 of clubs
+OPP --- 3 of hearts
+OPP --- 10 of diamonds
+OPP --- 5 of spades
+OPP --- 5 of hearts
+CUT --- Jack of spades
+
+START PEG (start player: OPP)
+[Pegging: 10 ---  OPP --- 10 of diamonds]
+  10  <peg card 10 played>
+[Pegging: 10 ---  ME --- King of hearts]
+  20  <peg card 10 played>
+[Pegging: 5 ---  OPP --- 5 of spades]
+  25  <peg card 5 played>
+[Pegging: 6 ---  ME --- 6 of diamonds]
+  31  <peg card 6 played>
+THIRTYONE exactly for ME
+ENDING PLAYER: ME
+Final total: 31 (play again?)
+
+START PEG (start player: OPP)
+[Pegging: 5 ---  OPP --- 5 of hearts]
+  5  <peg card 5 played>
+[Pegging: 9 ---  ME --- 9 of spades]
+  14  <peg card 9 played>
+[Pegging: 3 ---  OPP --- 3 of hearts]
+  17  <peg card 3 played>
+[Pegging: 2 ---  ME --- 2 of clubs]
+  19  <peg card 2 played>
+No play possible for player: OPP
+No play possible for player: ME
+ENDING PLAYER: ME
+Final total: 19 (play again?)
+exiting peg>>>>>>>>
+
+
+COUNT IT UP! (in construction..)
+===========
+
+
+
+Actual hand:
+{ 'player' : 'ME',  'suit' : 'diamonds',  'cardName': '6' } (pegged)
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+Counting points from 15s..
+[6, 10, 2, 9, 10]
+9 6 
+OUT with myReturn2, got 33 fifteens
+Counting points from pairs..
+Counting points from runs..
+Hand size (in countRuns): 4
+In Utils(4), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  13 checked as the next in run 7
+handId: 0, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  2 checked as the next in run 7
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  9 checked as the next in run 7
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  11 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  11 checked as the next in run 7
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+ 
+  9 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  9 checked as the next in run 7
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  2 checked as the next in run 7
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  11 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  11 checked as the next in run 7
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+ 
+  2 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  11 checked as the next in run 7
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+ 
+  2 checked as the next in run 7
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+ 
+  9 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  9 checked as the next in run 7
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+ 
+  2 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+  2 checked as the next in run 7
+handId: 1, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  13 checked as the next in run 7
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  9 checked as the next in run 7
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  11 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  11 checked as the next in run 7
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+ 
+  9 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  9 checked as the next in run 7
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  13 checked as the next in run 7
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  11 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  11 checked as the next in run 7
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+ 
+  13 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  11 checked as the next in run 7
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+ 
+  13 checked as the next in run 7
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+ 
+  9 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  9 checked as the next in run 7
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+ 
+  13 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+  9 checked as the next in run 7
+handId: 2, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  13 checked as the next in run 7
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  2 checked as the next in run 7
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  11 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  11 checked as the next in run 7
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+ 
+  2 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  2 checked as the next in run 7
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  13 checked as the next in run 7
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  11 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  11 checked as the next in run 7
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+ 
+  13 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  11 checked as the next in run 7
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+ 
+  13 checked as the next in run 7
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+ 
+  2 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  2 checked as the next in run 7
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+ 
+  13 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+  11 checked as the next in run 7
+handId: 3, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+ 
+  13 checked as the next in run 7
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+ 
+  2 checked as the next in run 7
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+ 
+  9 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  9 checked as the next in run 7
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+ 
+  2 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  2 checked as the next in run 7
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+ 
+  13 checked as the next in run 7
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'spades',  'cardName': '9' } (pegged)
+ 
+  9 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  9 checked as the next in run 7
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+ 
+  13 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  9 checked as the next in run 7
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+ 
+  13 checked as the next in run 7
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'clubs',  'cardName': '2' } (pegged)
+ 
+  2 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  2 checked as the next in run 7
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 6
+
+hand:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+checkRest:
+{ 'player' : 'ME',  'suit' : 'hearts',  'cardName': 'King' } (pegged)
+ 
+  13 checked as the next in run 7
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 6
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+inARow==> 1
+FOUND 1 IN A ROW!!
+Counting points from flush..
+Counting points from spJack..
+
+
+
+Actual hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '3' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+Counting points from 15s..
+[3, 10, 5, 5, 10]
+5 10 
+5 10 
+10 5 
+10 5 
+OUT with myReturn2, got 67 fifteens
+Counting points from pairs..
+Counting points from runs..
+Hand size (in countRuns): 4
+In Utils(4), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  5 checked as the next in run 4
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  5 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  11 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  11 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+ 
+  5 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  5 checked as the next in run 4
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  5 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  11 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  11 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+ 
+  5 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  11 checked as the next in run 4
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+ 
+  5 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+ 
+  5 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  5 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+ 
+  5 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+  5 checked as the next in run 4
+handId: 1, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  5 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  11 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  11 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+ 
+  5 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  5 checked as the next in run 4
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  11 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  11 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  11 checked as the next in run 4
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+ 
+  5 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  5 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+  5 checked as the next in run 4
+handId: 2, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  5 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  11 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  11 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+ 
+  5 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  5 checked as the next in run 4
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+checkRest:
+{ 'player' : 'CUT',  'suit' : 'spades',  'cardName': 'Jack' } (in hand)
+ 
+  11 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  11 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  11 checked as the next in run 4
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+ 
+  5 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  5 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+  11 checked as the next in run 4
+handId: 3, len checkRest: 4
+Not a run, check on! (4)
+In Utils(3), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+ 
+  5 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+ 
+  5 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  5 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+ 
+  5 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  5 checked as the next in run 4
+handId: 1, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'hearts',  'cardName': '5' } (pegged)
+ 
+  5 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  5 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+  5 checked as the next in run 4
+handId: 2, len checkRest: 3
+Not a run, check on! (3)
+In Utils(2), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'spades',  'cardName': '5' } (pegged)
+ 
+  5 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+  5 checked as the next in run 4
+handId: 1, len checkRest: 2
+Not a run, check on! (2)
+In Utils(1), bCrd#: 3
+
+hand:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+checkRest:
+{ 'player' : 'OPP',  'suit' : 'diamonds',  'cardName': '10' } (pegged)
+ 
+  10 checked as the next in run 4
+handId: 0, len checkRest: 1
+Not a run, check on! (1)
+In Utils(0), bCrd#: 3
+EVER GET HERE?(1)
+inARow==> 1
+EVER GET HERE?(2)
+inARow==> 1
+EVER GET HERE?(3)
+inARow==> 1
+EVER GET HERE?(4)
+inARow==> 1
+FOUND 1 IN A ROW!!
+Counting points from flush..
+Counting points from spJack..
+For the ROUND, ME scores 34 and OPP scores 68
