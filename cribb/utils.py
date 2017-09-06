@@ -17,3 +17,10 @@ def printCard(cardObj):
     #print("%s of %s" % (card['cardName'],
     #                           card['suit']))
     return card['cardName'] + " of " + card['suit']
+
+def evaluateHand(hand, cut):
+	if cut == None:
+		print("just hand of 4 here")
+		pt15s = hand.count15s()
+	else:
+		print("eval with cut: %s" % printCard(cut))

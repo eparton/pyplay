@@ -36,7 +36,7 @@ class hand:
     def __init__(self):
         #self.player = player
         self.cards = []
-    def discard(self, cardIndex):
+    def discardCard(self, cardIndex):
         self.cards[cardIndex].playedStatus = -1 ## -1 -> IN KITTEN
     def cardsInHand(self): ##count the number left without traversal?
         left = 0
@@ -44,6 +44,11 @@ class hand:
             if self.cards[i].playedStatus == 0:
                 left += 1
         return left
+    def count15s(self):
+        for card in self.cards:
+            if card.playedStatus is not -1: #if not in kitten, then either played or in hand
+                print("Card in hand: %s" % printCard(card))
+        print("Done with count15s")
 
 #################
 ### ROUND #######
@@ -64,14 +69,8 @@ class round:
         self.temp = {}
     def deal(self):
         for player in self.game.players:
-            currentHand = hand()
-            print("\nHAND for %d:" % player.playerID)
-            for i in range(0,HANDSIZE):
-                oneCard = self.game.deck.dealone()
-                currentHand.cards.append(oneCard)
-                print("%s" % printCard(oneCard))
-            player.hand = currentHand
-        #return hands
+            player.hand = hand()
+        self.printHands()
     def setupCut(self):
         self.cutCard = self.game.deck.dealone() ##NAME OF PLAYER REMOVED IN v2
         print("\njust pulled cut card")
@@ -79,84 +78,84 @@ class round:
         #self.cutCard = cutCard
     def discard(self):
         for player in self.game.players:
-            player.hand.discard(0)
-            player.hand.discard(1)
+            player.hand.discardCard(0)
+            player.hand.discardCard(1)
+    def printHands(self):
+        for player in self.game.players:
+            print("\nHAND for %d:" % player.playerID)
+            for i in range(0,HANDSIZE):
+                oneCard = self.game.deck.dealone()
+                player.hand.cards.append(oneCard)
+                print("%s" % printCard(oneCard))
 
-    def cardPlayed(self, cardValue):
-        self.total += cardValue
-        #print("(%s) played %d - total peg play: %d" % (pName(player), pegCard,self.total))
-        #print("player %d left: %d" %(player,self.hands[player].cardsInHand()))
-        self.lastPlayer = self.currentPlayer
-        self.currentPlayer = switchPlayer(self.currentPlayer)
-        print("  %d  <peg card %d played>" % (self.total, cardValue))
-        return cardValue
-    def endCount(self):
-        self.currentPlayer = switchPlayer(self.lastPlayer)
-        print("ENDING PLAYER: %s" % pName(self.lastPlayer))
-        print("Final total: %d (play again?)" % self.total)
-        
-    def count(self):
-        print("COUNT IT UP! (in construction..)\n===========")
-        pointsME  = self.hands[ME].countHand()
-        pointsOPP = self.hands[OPP].countHand()
-        print("For the ROUND, ME scores %d and OPP scores %d" % (pointsME,pointsOPP))
-        return
+
     def pegRound(self):
-		print("\nStart pegging.. (%d was dealer)" % self.dealer.playerID)
-		self.currentPlayerId = switchPlayer(self.dealer.playerID)
-		self.lastPlayedId	 = self.dealer.playerID
-		print("Player now playing: %d" % self.currentPlayerId)
-		pegDone = 0
-		while not pegDone:
-			playedInPeg = 0
-			for playerIter in range(NUMPLAYERS):
-				nextToPlayId = (self.lastPlayedId + playerIter + 1) % NUMPLAYERS
-				player = self.game.players[nextToPlayId]
-				#print("lastPlayedId: %d, nextToPlayId: %d, playerID: %d" % \
-				#	  (self.lastPlayedId,nextToPlayId, player.playerID))
-				if player.hand.cardsInHand() > 0:
-					#print("(at least player #%d has cards to play)" % player.playerID)
-					playedInPeg = self.pegOneCheck(player.playerID) ## takes care of switching
-					#return of 1 means we played a card
-					if playedInPeg:
-						break  ## will skip next line, otherwise execute
-			if not playedInPeg:
-				if self.pegTotal == 31:
-					score = 2
-				else:
-					score = 1
-				player.points += score
-				print("That's 'gos' all around! Total: %d, player %d scores %d\n" % \
-				     (self.pegTotal, player.playerID, score))
-				#print("===> %d -- NO MORE CARDS, exiting pegRound\nRemaining cards:" % self.pegTotal)
-				##TEMP DISPLAY ONLY  -- Use list compression
-				for temp in self.game.players:
-					for card in temp.hand.cards:
-						if card.playedStatus is INHAND:
-							print("Player %d leaves behind: %s" % (temp.playerID,printCard(card)))
-				###################
-				self.pegTotal = 0
-				for player in self.game.players:
-					pegDone = 1
-					if player.hand.cardsInHand() > 0:
-						pegDone = 0
-						break
-		resultsStr = "Results of round:"
-		for player in self.game.players:
-			resultsStr += " player " + str(player.playerID) + ": " + str(player.points)
-		print(resultsStr)
-		return
-    def pegOne(self, card):
-		card.playedStatus = PLAYED
-		self.pegTotal += card.countValue()
-		print("->PLAYING (player: %d): %s -- Total: %d" % \
-			  (self.temp["player"].playerID,self.temp["cardStr"],self.pegTotal))
-		self.lastPlayedId = self.currentPlayerId
-		self.currentPlayerId = switchPlayer(self.currentPlayerId)
-		return card
+        print("\nStart pegging.. (%d was dealer)" % self.dealer.playerID)
+        """
+        print("To know what to discard, first we count some points in hand")
+        for player in self.game.players:
+            evaluateHand(player.hand, None)
+        return
+        """
+        self.currentPlayerId = switchPlayer(self.dealer.playerID)
+        self.lastPlayedId    = self.dealer.playerID
+        print("Player now playing: %d" % self.currentPlayerId)
+        pegDone = 0
+        while not pegDone:
+            playedInPeg = 0
+            for playerIter in range(NUMPLAYERS):
+                nextToPlayId = (self.lastPlayedId + playerIter + 1) % NUMPLAYERS
+                player = self.game.players[nextToPlayId]
+                #print("lastPlayedId: %d, nextToPlayId: %d, playerID: %d" % \
+                #     (self.lastPlayedId,nextToPlayId, player.playerID))
+                if player.hand.cardsInHand() > 0:
+                    #print("(at least player #%d has cards to play)" % player.playerID)
+                    playedInPeg = self.pegOneCheck(player.playerID) ## takes care of switching
+                    #return of 1 means we played a card
+                    if playedInPeg:
+                        break  ## will skip next line, otherwise execute
+            if not playedInPeg:
+                if self.pegTotal == 31:
+                    score = 2
+                else:
+                    score = 1
+                player.points += score
+                print("That's 'gos' all around! Total: %d, player %d scores %d\n" % \
+                     (self.pegTotal, player.playerID, score))
+                #print("===> %d -- NO MORE CARDS, exiting pegRound\nRemaining cards:" % self.pegTotal)
+                ##TEMP DISPLAY ONLY  -- Use list compression
+                for temp in self.game.players:
+                    for card in temp.hand.cards:
+                        if card.playedStatus is INHAND:
+                            print("Player %d leaves behind: %s" % (temp.playerID,printCard(card)))
+                #list comprehension trouble with print()
+                #[print("Player %d LEAVES BEHIND: %s" % (temp.playerID,printCard(card))) \
+                #if card.playedStatus is INHAND for card in temp.hand.cards for temp in self.game.players ]
 
-	#def randoPeg(self):
-	
+                ###################
+                self.pegTotal = 0
+                for player in self.game.players:
+                    pegDone = 1
+                    if player.hand.cardsInHand() > 0:
+                        pegDone = 0
+                        break
+        resultsStr = "Results of round:"
+        for player in self.game.players:
+            resultsStr += " player " + str(player.playerID) + ": " + str(player.points)
+        print(resultsStr)
+        return
+        
+    def pegOne(self, card):
+        card.playedStatus = PLAYED
+        self.pegTotal += card.countValue()
+        print("->PLAYING (player: %d): %s -- Total: %d" % \
+              (self.temp["player"].playerID,self.temp["cardStr"],self.pegTotal))
+        self.lastPlayedId = self.currentPlayerId
+        self.currentPlayerId = switchPlayer(self.currentPlayerId)
+        return card
+
+    #def randoPeg(self):
+    
     def pegOneCheck(self, currentId):
         for i in range(NUMPLAYERS):
             pegAttemptPlayerID = (currentId + i) % NUMPLAYERS  # give fair chance starting AFTER current
@@ -168,11 +167,11 @@ class round:
                 cardStr = printCard(card)
                 if (card.playedStatus == INHAND) and \
                    (card.countValue() +  self.pegTotal <= 31):
-					self.temp["player"]=player
-					self.temp["cardStr"]=cardStr
-					card = self.pegOne(card)  # must save it back because modified status
+                    self.temp["player"]=player
+                    self.temp["cardStr"]=cardStr
+                    card = self.pegOne(card)  # must save it back because modified status
                     ## 1 means we played a card
-					return 1
+                    return 1
                     #break ##so that this player doesn't play any more
                 else:
                     pass
@@ -230,6 +229,77 @@ Player 0 leaves behind: Queen of diamonds
 That's 'gos' all around! Total: 10, player 1 scores 1
 ************* ^ Wrong since player 0 was the one to score
 Results of round: player 0: 3 player 1: 4
+
+====================================================
+Another example, with three players:
+=======
+=======
+Start round 2!! (Dealer: 2)
+
+HAND for 0:
+4 of diamonds
+6 of diamonds
+8 of spades
+9 of diamonds
+9 of hearts
+3 of hearts
+
+HAND for 1:
+10 of clubs
+6 of spades
+7 of diamonds
+Jack of clubs
+Jack of diamonds
+Queen of spades
+
+HAND for 2:
+2 of diamonds
+2 of clubs
+Jack of spades
+7 of clubs
+King of clubs
+Ace of diamonds
+
+just pulled cut card
+3 of diamonds
+
+Start pegging.. (2 was dealer)
+Player now playing: 0
+->PLAYING (player: 0): 8 of spades -- Total: 8
+->PLAYING (player: 1): 7 of diamonds -- Total: 15
+->PLAYING (player: 2): Jack of spades -- Total: 25
+->PLAYING (player: 0): 3 of hearts -- Total: 28
+->PLAYING (player: 2): Ace of diamonds -- Total: 29
+That's 'gos' all around! Total: 29, player 2 scores 1
+
+Player 0 leaves behind: 9 of diamonds
+Player 0 leaves behind: 9 of hearts
+Player 1 leaves behind: Jack of clubs
+Player 1 leaves behind: Jack of diamonds
+Player 1 leaves behind: Queen of spades
+Player 2 leaves behind: 7 of clubs
+Player 2 leaves behind: King of clubs
+->PLAYING (player: 0): 9 of diamonds -- Total: 9
+->PLAYING (player: 1): Jack of clubs -- Total: 19
+->PLAYING (player: 2): 7 of clubs -- Total: 26
+That's 'gos' all around! Total: 26, player 2 scores 1
+
+Player 0 leaves behind: 9 of hearts
+Player 1 leaves behind: Jack of diamonds
+Player 1 leaves behind: Queen of spades
+Player 2 leaves behind: King of clubs
+->PLAYING (player: 0): 9 of hearts -- Total: 9
+->PLAYING (player: 1): Jack of diamonds -- Total: 19
+->PLAYING (player: 2): King of clubs -- Total: 29
+That's 'gos' all around! Total: 29, player 2 scores 1
+
+Player 1 leaves behind: Queen of spades
+->PLAYING (player: 1): Queen of spades -- Total: 10
+That's 'gos' all around! Total: 10, player 0 scores 1
+
+Results of round: player 0: 1 player 1: 4 player 2: 6
+============== ^ another example of player 1 starting,
+                 making only play, then 0 gets credit!
 
 
 """
