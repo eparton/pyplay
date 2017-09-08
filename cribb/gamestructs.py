@@ -10,7 +10,6 @@ class game:
         self.numPlayers = numPlayers
         for i in range(numPlayers):
             self.players.append(player(i))
-        #self.points = [0,0]
     def shuffle(self):
         self.deck = deck()
     def gameOver(self):
@@ -28,7 +27,6 @@ class player:
         self.points = 0
         self.hand = None
 
-
 #################
 ### HAND ########
 #################
@@ -36,6 +34,7 @@ class hand:
     def __init__(self):
         #self.player = player
         self.cards = []
+        self.cut = None
     def discardCard(self, cardIndex):
         self.cards[cardIndex].playedStatus = -1 ## -1 -> IN KITTEN
     def cardsInHand(self): ##count the number left without traversal?
@@ -45,10 +44,25 @@ class hand:
                 left += 1
         return left
     def count15s(self):
+        inHand = []
         for card in self.cards:
             if card.playedStatus is not -1: #if not in kitten, then either played or in hand
                 print("Card in hand: %s" % printCard(card))
+                inHand.append(card.countValue())
+        inHand.append(cut.countValue())
+        print("Hand:")
+        print(inHand)
+        result=util15(inHand,15)
+        print(result)
         print("Done with count15s")
+    def evaluateHand(self, cut):
+    	if cut == None:
+    		print("just hand of 4 here, ERROR")
+            return
+    	self.cut = cut
+    	print("eval with cut: %s" % printCard(cut))
+    	pt15s = self.count15s()
+
 
 #################
 ### ROUND #######
@@ -88,15 +102,16 @@ class round:
                 player.hand.cards.append(oneCard)
                 print("%s" % printCard(oneCard))
 
-
-    def pegRound(self):
-        print("\nStart pegging.. (%d was dealer)" % self.dealer.playerID)
-        """
+    def decideDiscrard(self):
         print("To know what to discard, first we count some points in hand")
         for player in self.game.players:
-            evaluateHand(player.hand, None)
+            discard = player.hand.evaluateHand(self.cutCard)
+            print("Player %d with discard card indices: ")
+            print(discard)
         return
-        """
+        
+    def pegRound(self):        
+        print("\nStart pegging.. (%d was dealer)" % self.dealer.playerID)
         self.currentPlayerId = switchPlayer(self.dealer.playerID)
         self.lastPlayedId    = self.dealer.playerID
         print("Player now playing: %d" % self.currentPlayerId)

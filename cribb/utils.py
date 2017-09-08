@@ -18,6 +18,18 @@ def printCard(cardObj):
     #                           card['suit']))
     return card['cardName'] + " of " + card['suit']
 
+def util15(hand,sum):
+    print("hand[1:] would be:")
+    print(hand[1:],)
+    if sum > 0 and len(hand) == 0:
+        return False
+    elif sum == 0:
+        return True
+    elif sum < 0:
+        return False
+    #firstValue = hand[0]
+    return util15(hand[1:],sum-hand[0])
+
 def evaluateHand(hand, cut):
 	if cut == None:
 		print("just hand of 4 here")

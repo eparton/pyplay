@@ -19,6 +19,7 @@ def play():
         #hands = deal(GAME.deck, GAME.numPlayers)
 
         oneRound = round(GAME.players[dealerID], GAME)
+        oneRound.decideDiscard()
         oneRound.pegRound()
         #oneRound.count()
         dealerID = switchPlayer(dealerID)
